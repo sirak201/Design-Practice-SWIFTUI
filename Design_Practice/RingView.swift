@@ -13,6 +13,7 @@ struct RingView: View {
     @State var startTrim  = 0.2
     var body: some View {
         ZStack {
+                
             Circle()
                 .stroke(Color.black.opacity(0.1), lineWidth: 5)
                 .frame(width: 44, height: 44)
@@ -22,6 +23,11 @@ struct RingView: View {
                 .rotationEffect(.init(degrees: 90))
                 .rotation3DEffect(.degrees(180), axis: (x: 1, y: 0, z: 0))
                 .frame(width: 44, height: 44)
+                .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 10)
+            
+            Text("82%")
+                .font(.subheadline)
+                .fontWeight(.bold)
         }
         
     }
