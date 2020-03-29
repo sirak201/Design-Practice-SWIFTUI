@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4F1965A8242C3C8E007B9B9D /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1965A7242C3C8E007B9B9D /* MenuView.swift */; };
+		4F233DB52430199300F03DE9 /* UpdateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F233DB42430199300F03DE9 /* UpdateList.swift */; };
+		4F233DB724302CA900F03DE9 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F233DB624302CA900F03DE9 /* TabBar.swift */; };
 		4F65B11A242D77E70007B9B0 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F65B119242D77E70007B9B0 /* Home.swift */; };
 		4F65B11C242D9AEC0007B9B0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F65B11B242D9AEC0007B9B0 /* HomeView.swift */; };
 		4FD864DB242BE2DB009D7CC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD864DA242BE2DB009D7CC8 /* AppDelegate.swift */; };
@@ -20,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		4F1965A7242C3C8E007B9B9D /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		4F233DB42430199300F03DE9 /* UpdateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateList.swift; sourceTree = "<group>"; };
+		4F233DB624302CA900F03DE9 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		4F65B119242D77E70007B9B0 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		4F65B11B242D9AEC0007B9B0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4FD864D7242BE2DB009D7CC8 /* Design_Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Design_Practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +71,8 @@
 				4FD864DE242BE2DB009D7CC8 /* ContentView.swift */,
 				4F1965A7242C3C8E007B9B9D /* MenuView.swift */,
 				4F65B119242D77E70007B9B0 /* Home.swift */,
+				4F233DB624302CA900F03DE9 /* TabBar.swift */,
+				4F233DB42430199300F03DE9 /* UpdateList.swift */,
 				4F65B11B242D9AEC0007B9B0 /* HomeView.swift */,
 				4FD864E0242BE2E2009D7CC8 /* Assets.xcassets */,
 				4FD864E5242BE2E2009D7CC8 /* LaunchScreen.storyboard */,
@@ -156,7 +162,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FD864DB242BE2DB009D7CC8 /* AppDelegate.swift in Sources */,
+				4F233DB52430199300F03DE9 /* UpdateList.swift in Sources */,
 				4F1965A8242C3C8E007B9B9D /* MenuView.swift in Sources */,
+				4F233DB724302CA900F03DE9 /* TabBar.swift in Sources */,
 				4F65B11A242D77E70007B9B0 /* Home.swift in Sources */,
 				4F65B11C242D9AEC0007B9B0 /* HomeView.swift in Sources */,
 				4FD864DD242BE2DB009D7CC8 /* SceneDelegate.swift in Sources */,
