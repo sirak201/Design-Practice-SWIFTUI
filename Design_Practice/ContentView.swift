@@ -88,7 +88,7 @@ struct ContentView: View {
 //            Text("\(bottomState.height)")
 //                .offset(y : -300)
                 
-            BottomView()
+            BottomView(show: $showCard)
                 .offset(x: 0, y: showCard ? 360 : 1000)
                 .offset(y : bottomState.height)
                 .blur(radius: show ? 20 : 0)
@@ -182,6 +182,7 @@ struct TitleView: View {
 }
 
 struct BottomView: View {
+    @Binding var show : Bool
     var body: some View {
         VStack(spacing : 20) {
             Rectangle()
@@ -192,7 +193,27 @@ struct BottomView: View {
                 .multilineTextAlignment(.center)
                 .font(.subheadline)
                 .lineSpacing(4)
+            HStack(spacing : 20) {
+                RingView(color1: #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), color2: #colorLiteral(red: 0.1764705926, green: 0.01176470611, blue: 0.5607843399, alpha: 1), width: 88, height: 88, percent: 78, show: $show)
+                    .animation(Animation.easeInOut.delay(0.4) )
+                VStack(alignment : .leading) {
+                    Text("SwiftUI")
+                        .font(.headline)
+                        .fontWeight(.bold)
+                    Text("12 of 12 sections completed \n10 hours spent so far")
+                        .font(.footnote)
+                        .foregroundColor(.gray)
+                        .lineSpacing(4)
+                    
+                    }.padding()
+              
+                .background(Color.white)
+                .clipShape(RoundedRectangle(cornerRadius: 20))
+                .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y: 10)
+            
+            }.padding([.trailing , .top] )
             Spacer()
+            
         }
         .padding(.top , 8)
         .padding(.horizontal , 20)

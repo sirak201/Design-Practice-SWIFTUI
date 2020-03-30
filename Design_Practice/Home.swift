@@ -11,14 +11,21 @@ import SwiftUI
 struct Home: View {
     @State var showMenu : Bool = false
     @State var viewState : CGSize = .zero
+    @State var showCard = false
     var body: some View {
         ZStack {
             
             Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)).edgesIgnoringSafeArea(.all)
             
-            HomeView(showMenu: $showMenu)
+            HomeView(showMenu: $showMenu, showCard: $showCard)
                 .padding(.top , 44)
-                .background(Color.white)
+                .background(
+                    VStack {
+                        LinearGradient(gradient: Gradient(colors: [Color("background2"), Color.white]), startPoint: .top, endPoint: .bottom).frame(height: 200)
+                        Spacer()
+                       
+                    }.background(Color.white)
+            )
                 .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
                 .offset(y: showMenu ? -450 : 0)
                 .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 20)
@@ -27,6 +34,7 @@ struct Home: View {
                 .scaleEffect(showMenu ? 0.9 : 1)
                 .edgesIgnoringSafeArea(.all)
                 .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
+          
             
             MenuView()
                 .background(Color.black.opacity(0.01))
@@ -45,6 +53,33 @@ struct Home: View {
                         self.viewState = .zero
                 }
             )
+            
+            if showCard {
+                Color.white.edgesIgnoringSafeArea(.all)
+                ContentView()
+                VStack {
+                    HStack {
+                        Spacer()
+                        Image(systemName: "xmark")
+                            .frame(width: 36, height: 36)
+                            .foregroundColor(Color.white)
+                            .background(Color.black)
+                            .clipShape(Circle())
+                            .onTapGesture {
+                                self.showCard = false
+                            }
+                        
+                    }
+                    Spacer()
+                }.padding()
+                .transition(.move(edge: .top))
+                .animation(.spring(response: 0.6, dampingFraction: 0.8, blendDuration: 0))
+                
+                
+            }
+
+            
+            
             
         }
     }
